@@ -1,6 +1,6 @@
 #!/bin/bash
 
-GEM5_BINARY="/home/other/CSE530-FA2022/gem5/build/X86/gem5.opt"
+GEM5_BINARY="/home/other/CSE530-FA2022/gem5/build_a4/build/X86/gem5.opt"
 
 GEM5_CONFIG_SCRIPT="cse530_a4_sys_config.py"
 
