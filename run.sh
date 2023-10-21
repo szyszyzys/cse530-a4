@@ -41,7 +41,7 @@ for issue_width in "${issue_widths[@]}"; do
 
             # Run GEM5 with the specified configuration
             $GEM5_BINARY -d "$OUTPUT_SUBDIR" $GEM5_CONFIG_SCRIPT \
-                --cmd="$BINARY_PATH" \
+                --binfile="$BINARY_PATH" \
                 --cse530_core_config="None"    \
                 --cse530_issue_width="$issue_width" \
                 --cse530_branch_predictor="$branch_predictor" \
