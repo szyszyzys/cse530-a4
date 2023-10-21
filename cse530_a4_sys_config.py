@@ -29,7 +29,8 @@ def addAdditionalOptions(parser):
                         help="path to the binary file")
     parser.add_argument("--binargs", type=str, default="",
                         help="arguments to the binary")
-
+    parser.add_argument("--cse530_branch_predictor", type=str, default="",
+                        help="brach predictor")
     parser.add_argument("--cse530-issue-width", action="store",
                         type=int, help="""issue width""", default=8)
     parser.add_argument("--cse530-store-queue-size", action="store",

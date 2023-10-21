@@ -44,7 +44,7 @@ for issue_width in "${issue_widths[@]}"; do
                 --cmd="$BINARY_PATH" \
                 --cse530_core_config="None"    \
                 --cse530_issue_width="$issue_width" \
-                --branch_predictor="$branch_predictor" \
+                --cse530_branch_predictor="$branch_predictor" \
                 --cse530_num_robs="$num_rob"
 
             cp "${OUTPUT_SUBDIR}"/stats.txt "${STATES_DIR}/${branch_predictor}_${issue_width}_${num_rob}.txt"

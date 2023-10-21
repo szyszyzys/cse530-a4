@@ -41,6 +41,7 @@ def createCPU(options, processes, system):
         options.cse530_num_robs = 32
         a4O3CPUConfig.initializeO3CPU(options, cpu)
     else:
+        options.branch_predictor=options.cse530_branch_predictor
         a4O3CPUConfig.initializeO3CPU(options, cpu)
 
     # create the interrupt controller for the CPU
