@@ -41,7 +41,7 @@ def createCPU(options, processes, system):
         options.cse530_num_robs = 32
         a4O3CPUConfig.initializeO3CPU(options, cpu)
     else:
-        raise ValueError("Unsupported cpu class.")
+        a4O3CPUConfig.initializeO3CPU(options, cpu)
 
     # create the interrupt controller for the CPU
     system.cpu.createInterruptController()
