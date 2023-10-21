@@ -46,7 +46,7 @@ for issue_width in "${issue_widths[@]}"; do
                 --cse530_branch_predictor="$branch_predictor" \
                 --cse530_num_robs="$num_rob" \
                 --outdir="$OUTPUT_DIR" \
-                -redirect-stderr /home/other/CSE530-FA2022/cse530_a4/cse530_a4_sys_config.py \
+                --redirect-stderr /home/other/CSE530-FA2022/cse530_a4/cse530_a4_sys_config.py \
                 --binfile=/home/other/CSE530-FA2022/cse530_a4/benchmarks/stanford/Quicksort  --l1i_size "4kB" --l1d_size "4kB" --l2_size "32kB"
 
             cp "${OUTPUT_SUBDIR}"/stats.txt "${STATES_DIR}/${branch_predictor}_${issue_width}_${num_rob}.txt"
