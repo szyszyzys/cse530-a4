@@ -41,11 +41,13 @@ for issue_width in "${issue_widths[@]}"; do
 
             # Run GEM5 with the specified configuration
             $GEM5_BINARY -d "$OUTPUT_SUBDIR" $GEM5_CONFIG_SCRIPT \
-                --binfile="$BINARY_PATH" \
                 --cse530_core_config="None"    \
                 --cse530_issue_width="$issue_width" \
                 --cse530_branch_predictor="$branch_predictor" \
-                --cse530_num_robs="$num_rob"
+                --cse530_num_robs="$num_rob" \
+                --outdir="$OUTPUT_DIR" \
+                -redirect-stderr /home/other/CSE530-FA2022/cse530_a4/cse530_a4_sys_config.py \
+                --binfile=/home/other/CSE530-FA2022/cse530_a4/benchmarks/stanford/Quicksort  --l1i_size "4kB" --l1d_size "4kB" --l2_size "32kB"
 
             cp "${OUTPUT_SUBDIR}"/stats.txt "${STATES_DIR}/${branch_predictor}_${issue_width}_${num_rob}.txt"
             echo "Experiment completed: ${branch_predictor} ${issue_width} ${num_rob}"
