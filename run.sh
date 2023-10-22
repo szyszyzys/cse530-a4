@@ -41,10 +41,10 @@ for issue_width in "${issue_widths[@]}"; do
 
             # Run GEM5 with the specified configuration
             $GEM5_BINARY -d "$OUTPUT_SUBDIR" $GEM5_CONFIG_SCRIPT \
-                --cse530_core_config="None"    \
-                --cse530_issue_width="$issue_width" \
-                --cse530_branch_predictor="$branch_predictor" \
-                --cse530_num_robs="$num_rob" \
+                --cse530-core-config="None"    \
+                --cse530-issue-width="$issue_width" \
+                --cse530-branch-predictor="$branch_predictor" \
+                --cse530-num-robs="$num_rob" \
                 --outdir="$OUTPUT_DIR" \
                 --redirect-stderr /home/other/CSE530-FA2022/cse530_a4/cse530_a4_sys_config.py \
                 --binfile=/home/other/CSE530-FA2022/cse530_a4/benchmarks/stanford/Quicksort  --l1i_size "4kB" --l1d_size "4kB" --l2_size "32kB"
